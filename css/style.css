@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    background-color: #64b4df;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 65rem;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 2rem;
+}
+
+/* Brand Name Area */
+.logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 1.2rem
+}
+
+.logo a span {
+    font-weight: 300
+}
+
+/* Navigation Bar Area */
+.nav-btn {
+    flex-grow: 3;
+    display: flex;
+}
+
+/* Nav Links Area */
+.nav-links {
+    flex-grow: 2;
+}
+
+.nav-links > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links > ul > li >a {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+    color: #FFF;
+    text-transform: capitalize;
+    transition: .5s;
+    position: relative;
+}
+
+.nav-links > ul > a:hover {
+    transform: scale(1.1)
+}
+
+.nav-links > ul li > a  i {
+    margin-left: .2rem
+}
+
+/* Drop Down Area */
+.dropdown {
+    position: absolute;
+    background-color: #FFF;
+    z-index:1;
+}
+
+.dropdown ul {
+    position: relative;
+}
+
+.dropdown a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    height: 2rem;
+    padding: 0 1.5rem;
+    text-transform: capitalize;
+    border-bottom: 1px solid #EFEFEF;
+    color: #64b4df;
+    transition: .3s;
+}
+
+.dropdown ul li:nth-last-of-type(2) a {
+    border: none;
+}
+
+.dropdown ul li:hover a {
+    background-color: #3498DB;
+    color: #FFF;
+}
+
+.arrow {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: -5.5px;
+    left: 32px;
+    background-color: #FFF;
+    transform: rotate(45deg);
+    transition: .3s;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.dropdown ul li:first-of-type:hover .arrow {
+    background-color: #3498DB
+}
+
+/* Login Area */
+.login {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login a {
+    display: block;
+    padding: .4rem 1.2rem;
+    border: 2px solid #FFF;
+    border-radius: 3rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: .9rem;
+    transition: .3s;
+}
+
+.login a:first-of-type:hover,
+.login a:last-of-type{
+    background-color: #FFF;
+    color: #64b4df;
+}
+
+.login a:first-of-type,
+.login a:last-of-type:hover{
+    background-color: transparent;
+    color: #FFF;
+}
+
+/* Start Section Area */
+
+section {
+    height: calc(100vh - 3rem);
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+
+section div {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(137, 193, 226, .5);
+}
